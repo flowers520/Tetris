@@ -70,16 +70,16 @@ class MainViewController: UIViewController, GameViewDelegate, SnappingSliderDele
         let toolBar = UIToolbar(frame: CGRectMake(0, MARGINE*2, screenWidth, TOOLBAR_HEIGHT))
         self.view.addSubview(toolBar)
         //创建第一个显示“速度：”标签
-        let speedLabel = UILabel(frame: CGRectMake(0, 0, 60, TOOLBAR_HEIGHT))
-        speedLabel.text = "速度："
+        let speedLabel = UILabel(frame: CGRectMake(0, 0, 80, TOOLBAR_HEIGHT))
+        speedLabel.text = "Speed："
         let speedLabelItem = UIBarButtonItem(customView: speedLabel)
         //创建第二个显示速度值的标签
         speedShow = UILabel(frame: CGRectMake(0, 0, 20, TOOLBAR_HEIGHT))
         speedShow.textColor = UIColor.redColor()
         let speedShowItem = UIBarButtonItem(customView: speedShow)
         //创建第三个显示“当前积分：”的标签
-        let scoreLabel = UILabel(frame: CGRectMake(0, 0, 90, TOOLBAR_HEIGHT))
-        scoreLabel.text = "当前积分："
+        let scoreLabel = UILabel(frame: CGRectMake(0, 0, 120, TOOLBAR_HEIGHT))
+        scoreLabel.text = "CurrentScore："
         let scoreLabelItem = UIBarButtonItem(customView: scoreLabel)
         //创建第四个显示积分值得标签
         scoreShow = UILabel(frame: CGRectMake(0, 0, 40, TOOLBAR_HEIGHT))
@@ -156,6 +156,7 @@ class MainViewController: UIViewController, GameViewDelegate, SnappingSliderDele
         let cancelAction = UIAlertAction(title: "否", style: .Cancel, handler: {
             (UIAlertAction) -> Void in
             print("你点击了否")
+            self.bgMusicPlayer.pause()
             self.dismissViewControllerAnimated(false, completion: nil)
         })
         let okAction = UIAlertAction(title: "是", style: .Default, handler: {
@@ -182,6 +183,7 @@ class MainViewController: UIViewController, GameViewDelegate, SnappingSliderDele
     //MARK: 点击事件
     
     func disBu(sender: UIButton!){
+        self.bgMusicPlayer.pause()
         self.dismissViewControllerAnimated(false, completion: nil)
      }
     

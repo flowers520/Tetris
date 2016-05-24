@@ -37,7 +37,7 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
         label = UILabel(frame: CGRectMake(0, 0, screen.width, 60))
         label.font = UIFont.systemFontOfSize(29.0)
         label.textAlignment = NSTextAlignment.Center
-        label.text = "分数栏"
+        label.text = "Fractional column"
         label.textColor = UIColor.whiteColor()
         self.view.addSubview(label)
         
@@ -54,7 +54,7 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
         self.view.addSubview(viewExit)
         
         buttonExit = UIButton(frame: CGRectMake((screen.width-60)/2, screen.height-55, 60, 50))
-        buttonExit.setTitle("返回", forState: UIControlState.Normal)
+        buttonExit.setTitle("exit", forState: UIControlState.Normal)
         buttonExit.titleLabel?.font = UIFont.systemFontOfSize(30.0)
         buttonExit.setTitleColor(UIColor.blueColor(), forState: .Normal)
         //buttonExit.setTitleColor(UIColor.blackColor(), forState: UIControlState.Highlighted)

@@ -33,9 +33,9 @@ class ViewController: UIViewController {
         
         //开始游戏
         startButton = UIButton(frame: CGRectMake(screen.width/2, screen.height/5*1, 160, 20))
-        startButton.setTitle("开始游戏", forState: .Normal)
+        startButton.setTitle("Start Game", forState: .Normal)
         startButton.setTitleColor(UIColor.grayColor(), forState: .Normal)
-        startButton.setTitle("傻不拉几", forState: .Highlighted)
+        startButton.setTitle("gay is girl", forState: .Highlighted)
         startButton.titleLabel?.font = UIFont.systemFontOfSize(30.0)
         startButton.setTitleColor(UIColor.blackColor(), forState: .Highlighted)
         startButton.addTarget(self, action: Selector("buttonStart:"), forControlEvents: .TouchUpInside)
@@ -43,7 +43,7 @@ class ViewController: UIViewController {
         
         //分数
         scoreButton = UIButton(frame: CGRectMake(screen.width/2, screen.height/5*2, 160, 20))
-        scoreButton.setTitle("分数", forState: .Normal)
+        scoreButton.setTitle("Score", forState: .Normal)
         scoreButton.setTitleColor(UIColor.grayColor(), forState: .Normal)
         scoreButton.titleLabel?.font = UIFont.systemFontOfSize(30.0)
         scoreButton.addTarget(self, action: Selector("buttonScore:"), forControlEvents: .TouchUpInside)
