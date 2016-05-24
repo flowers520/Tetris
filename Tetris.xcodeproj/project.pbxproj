@@ -1,0 +1,413 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		38375DEA1CE2F3F800CDDF17 /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 38375DE91CE2F3F800CDDF17 /* background.mp3 */; };
+		38375DEC1CE2F4A200CDDF17 /* shake.wav in Resources */ = {isa = PBXBuildFile; fileRef = 38375DEB1CE2F4A200CDDF17 /* shake.wav */; };
+		38375DEE1CE2F9BC00CDDF17 /* bgmusic.png in Resources */ = {isa = PBXBuildFile; fileRef = 38375DED1CE2F9BC00CDDF17 /* bgmusic.png */; };
+		383C408F1CCD026D00BB1EE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383C408E1CCD026D00BB1EE1 /* AppDelegate.swift */; };
+		383C40911CCD026D00BB1EE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383C40901CCD026D00BB1EE1 /* ViewController.swift */; };
+		383C40941CCD026D00BB1EE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 383C40921CCD026D00BB1EE1 /* Main.storyboard */; };
+		383C40961CCD026D00BB1EE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 383C40951CCD026D00BB1EE1 /* Assets.xcassets */; };
+		383C40991CCD026D00BB1EE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 383C40971CCD026D00BB1EE1 /* LaunchScreen.storyboard */; };
+		383C40A11CCD037200BB1EE1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383C40A01CCD037200BB1EE1 /* AVFoundation.framework */; };
+		383C40B21CCD0E3600BB1EE1 /* 俄罗斯方块-落方块.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 383C40AE1CCD0E3600BB1EE1 /* 俄罗斯方块-落方块.mp3 */; };
+		383C40B31CCD0E3600BB1EE1 /* 俄罗斯方块-失败.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 383C40AF1CCD0E3600BB1EE1 /* 俄罗斯方块-失败.mp3 */; };
+		383C40B41CCD0E3600BB1EE1 /* 俄罗斯方块1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 383C40B01CCD0E3600BB1EE1 /* 俄罗斯方块1.mp3 */; };
+		383C40B51CCD0E3600BB1EE1 /* 俄罗斯方块-消行.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 383C40B11CCD0E3600BB1EE1 /* 俄罗斯方块-消行.mp3 */; };
+		383C40B81CCD20DC00BB1EE1 /* Up.png in Resources */ = {isa = PBXBuildFile; fileRef = 383C40B71CCD20DC00BB1EE1 /* Up.png */; };
+		383C40BA1CCD20E700BB1EE1 /* Right.png in Resources */ = {isa = PBXBuildFile; fileRef = 383C40B91CCD20E700BB1EE1 /* Right.png */; };
+		383C40BC1CCD20ED00BB1EE1 /* Left.png in Resources */ = {isa = PBXBuildFile; fileRef = 383C40BB1CCD20ED00BB1EE1 /* Left.png */; };
+		383C40BE1CCD20F300BB1EE1 /* Down.png in Resources */ = {isa = PBXBuildFile; fileRef = 383C40BD1CCD20F300BB1EE1 /* Down.png */; };
+		383C40CC1CCDFA5A00BB1EE1 /* GameVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383C40CB1CCDFA5A00BB1EE1 /* GameVIew.swift */; };
+		3874BDC41CF3F704001CF7AD /* SnappingSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3874BDC31CF3F704001CF7AD /* SnappingSlider.swift */; };
+		3878C3A21CF2B67800F7ACA7 /* dis.png in Resources */ = {isa = PBXBuildFile; fileRef = 3878C3A11CF2B67800F7ACA7 /* dis.png */; };
+		389312F51CDA3442001B8F6B /* Icon1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 389312F41CDA3442001B8F6B /* Icon1.jpg */; };
+		389313031CDA3664001B8F6B /* Icon4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 389313021CDA3664001B8F6B /* Icon4.jpg */; };
+		3893130A1CDA369C001B8F6B /* Icon3iPhoneApp_60pt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 389313041CDA369C001B8F6B /* Icon3iPhoneApp_60pt@2x.png */; };
+		3893130B1CDA369C001B8F6B /* Icon3iPhoneApp_60pt@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 389313051CDA369C001B8F6B /* Icon3iPhoneApp_60pt@3x.png */; };
+		3893130C1CDA369C001B8F6B /* Icon3iPhoneSpootlight5_29pt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 389313061CDA369C001B8F6B /* Icon3iPhoneSpootlight5_29pt@2x.png */; };
+		3893130D1CDA369C001B8F6B /* Icon3iPhoneSpootlight5_29pt@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 389313071CDA369C001B8F6B /* Icon3iPhoneSpootlight5_29pt@3x.png */; };
+		3893130E1CDA369C001B8F6B /* Icon3iPhoneSpootlight7_40pt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 389313081CDA369C001B8F6B /* Icon3iPhoneSpootlight7_40pt@2x.png */; };
+		3893130F1CDA369C001B8F6B /* Icon3iPhoneSpootlight7_40pt@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 389313091CDA369C001B8F6B /* Icon3iPhoneSpootlight7_40pt@3x.png */; };
+		389313131CDA5281001B8F6B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389313121CDA5281001B8F6B /* MainViewController.swift */; };
+		389C43341CE4C50800B6502A /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389C43331CE4C50800B6502A /* ScoreViewController.swift */; };
+		389C43361CE4C50800B6502A /* Icon2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 389C43351CE4C50800B6502A /* Icon2.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		38375DE91CE2F3F800CDDF17 /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
+		38375DEB1CE2F4A200CDDF17 /* shake.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shake.wav; sourceTree = "<group>"; };
+		38375DED1CE2F9BC00CDDF17 /* bgmusic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgmusic.png; sourceTree = "<group>"; };
+		383C408B1CCD026D00BB1EE1 /* Tetris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tetris.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		383C408E1CCD026D00BB1EE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		383C40901CCD026D00BB1EE1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		383C40931CCD026D00BB1EE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		383C40951CCD026D00BB1EE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		383C40981CCD026D00BB1EE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		383C409A1CCD026D00BB1EE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		383C40A01CCD037200BB1EE1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		383C40AE1CCD0E3600BB1EE1 /* 俄罗斯方块-落方块.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "俄罗斯方块-落方块.mp3"; sourceTree = "<group>"; };
+		383C40AF1CCD0E3600BB1EE1 /* 俄罗斯方块-失败.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "俄罗斯方块-失败.mp3"; sourceTree = "<group>"; };
+		383C40B01CCD0E3600BB1EE1 /* 俄罗斯方块1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "俄罗斯方块1.mp3"; sourceTree = "<group>"; };
+		383C40B11CCD0E3600BB1EE1 /* 俄罗斯方块-消行.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "俄罗斯方块-消行.mp3"; sourceTree = "<group>"; };
+		383C40B71CCD20DC00BB1EE1 /* Up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Up.png; sourceTree = "<group>"; };
+		383C40B91CCD20E700BB1EE1 /* Right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Right.png; sourceTree = "<group>"; };
+		383C40BB1CCD20ED00BB1EE1 /* Left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Left.png; sourceTree = "<group>"; };
+		383C40BD1CCD20F300BB1EE1 /* Down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Down.png; sourceTree = "<group>"; };
+		383C40CB1CCDFA5A00BB1EE1 /* GameVIew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameVIew.swift; sourceTree = "<group>"; };
+		3874BDC31CF3F704001CF7AD /* SnappingSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnappingSlider.swift; sourceTree = "<group>"; };
+		3878C3A11CF2B67800F7ACA7 /* dis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dis.png; sourceTree = "<group>"; };
+		389312F41CDA3442001B8F6B /* Icon1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Icon1.jpg; sourceTree = "<group>"; };
+		389313021CDA3664001B8F6B /* Icon4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Icon4.jpg; sourceTree = "<group>"; };
+		389313041CDA369C001B8F6B /* Icon3iPhoneApp_60pt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon3iPhoneApp_60pt@2x.png"; sourceTree = "<group>"; };
+		389313051CDA369C001B8F6B /* Icon3iPhoneApp_60pt@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon3iPhoneApp_60pt@3x.png"; sourceTree = "<group>"; };
+		389313061CDA369C001B8F6B /* Icon3iPhoneSpootlight5_29pt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon3iPhoneSpootlight5_29pt@2x.png"; sourceTree = "<group>"; };
+		389313071CDA369C001B8F6B /* Icon3iPhoneSpootlight5_29pt@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon3iPhoneSpootlight5_29pt@3x.png"; sourceTree = "<group>"; };
+		389313081CDA369C001B8F6B /* Icon3iPhoneSpootlight7_40pt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon3iPhoneSpootlight7_40pt@2x.png"; sourceTree = "<group>"; };
+		389313091CDA369C001B8F6B /* Icon3iPhoneSpootlight7_40pt@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon3iPhoneSpootlight7_40pt@3x.png"; sourceTree = "<group>"; };
+		389313121CDA5281001B8F6B /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		389C43331CE4C50800B6502A /* ScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
+		389C43351CE4C50800B6502A /* Icon2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Icon2.jpg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		383C40881CCD026D00BB1EE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				383C40A11CCD037200BB1EE1 /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		383C40821CCD026D00BB1EE1 = {
+			isa = PBXGroup;
+			children = (
+				383C40A01CCD037200BB1EE1 /* AVFoundation.framework */,
+				383C408D1CCD026D00BB1EE1 /* Tetris */,
+				383C408C1CCD026D00BB1EE1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		383C408C1CCD026D00BB1EE1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				383C408B1CCD026D00BB1EE1 /* Tetris.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		383C408D1CCD026D00BB1EE1 /* Tetris */ = {
+			isa = PBXGroup;
+			children = (
+				383C40AD1CCD0E1D00BB1EE1 /* Music */,
+				383C408E1CCD026D00BB1EE1 /* AppDelegate.swift */,
+				383C40901CCD026D00BB1EE1 /* ViewController.swift */,
+				389313121CDA5281001B8F6B /* MainViewController.swift */,
+				389C43331CE4C50800B6502A /* ScoreViewController.swift */,
+				383C40CB1CCDFA5A00BB1EE1 /* GameVIew.swift */,
+				3874BDC31CF3F704001CF7AD /* SnappingSlider.swift */,
+				383C40921CCD026D00BB1EE1 /* Main.storyboard */,
+				383C40951CCD026D00BB1EE1 /* Assets.xcassets */,
+				383C40971CCD026D00BB1EE1 /* LaunchScreen.storyboard */,
+				383C409A1CCD026D00BB1EE1 /* Info.plist */,
+			);
+			path = Tetris;
+			sourceTree = "<group>";
+		};
+		383C40AD1CCD0E1D00BB1EE1 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				389313041CDA369C001B8F6B /* Icon3iPhoneApp_60pt@2x.png */,
+				389313051CDA369C001B8F6B /* Icon3iPhoneApp_60pt@3x.png */,
+				389313061CDA369C001B8F6B /* Icon3iPhoneSpootlight5_29pt@2x.png */,
+				389313071CDA369C001B8F6B /* Icon3iPhoneSpootlight5_29pt@3x.png */,
+				389313081CDA369C001B8F6B /* Icon3iPhoneSpootlight7_40pt@2x.png */,
+				389313091CDA369C001B8F6B /* Icon3iPhoneSpootlight7_40pt@3x.png */,
+				389312F41CDA3442001B8F6B /* Icon1.jpg */,
+				389C43351CE4C50800B6502A /* Icon2.jpg */,
+				389313021CDA3664001B8F6B /* Icon4.jpg */,
+				3878C3A11CF2B67800F7ACA7 /* dis.png */,
+				383C40BD1CCD20F300BB1EE1 /* Down.png */,
+				383C40BB1CCD20ED00BB1EE1 /* Left.png */,
+				383C40B91CCD20E700BB1EE1 /* Right.png */,
+				383C40B71CCD20DC00BB1EE1 /* Up.png */,
+				38375DED1CE2F9BC00CDDF17 /* bgmusic.png */,
+				38375DE91CE2F3F800CDDF17 /* background.mp3 */,
+				38375DEB1CE2F4A200CDDF17 /* shake.wav */,
+				383C40AE1CCD0E3600BB1EE1 /* 俄罗斯方块-落方块.mp3 */,
+				383C40AF1CCD0E3600BB1EE1 /* 俄罗斯方块-失败.mp3 */,
+				383C40B01CCD0E3600BB1EE1 /* 俄罗斯方块1.mp3 */,
+				383C40B11CCD0E3600BB1EE1 /* 俄罗斯方块-消行.mp3 */,
+			);
+			name = Music;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		383C408A1CCD026D00BB1EE1 /* Tetris */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 383C409D1CCD026D00BB1EE1 /* Build configuration list for PBXNativeTarget "Tetris" */;
+			buildPhases = (
+				383C40871CCD026D00BB1EE1 /* Sources */,
+				383C40881CCD026D00BB1EE1 /* Frameworks */,
+				383C40891CCD026D00BB1EE1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tetris;
+			productName = Tetris;
+			productReference = 383C408B1CCD026D00BB1EE1 /* Tetris.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		383C40831CCD026D00BB1EE1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = jim;
+				TargetAttributes = {
+					383C408A1CCD026D00BB1EE1 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = KU8RW2VB45;
+					};
+				};
+			};
+			buildConfigurationList = 383C40861CCD026D00BB1EE1 /* Build configuration list for PBXProject "Tetris" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 383C40821CCD026D00BB1EE1;
+			productRefGroup = 383C408C1CCD026D00BB1EE1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				383C408A1CCD026D00BB1EE1 /* Tetris */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		383C40891CCD026D00BB1EE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				383C40991CCD026D00BB1EE1 /* LaunchScreen.storyboard in Resources */,
+				3878C3A21CF2B67800F7ACA7 /* dis.png in Resources */,
+				389313031CDA3664001B8F6B /* Icon4.jpg in Resources */,
+				38375DEE1CE2F9BC00CDDF17 /* bgmusic.png in Resources */,
+				389C43361CE4C50800B6502A /* Icon2.jpg in Resources */,
+				383C40961CCD026D00BB1EE1 /* Assets.xcassets in Resources */,
+				3893130D1CDA369C001B8F6B /* Icon3iPhoneSpootlight5_29pt@3x.png in Resources */,
+				383C40BC1CCD20ED00BB1EE1 /* Left.png in Resources */,
+				383C40B51CCD0E3600BB1EE1 /* 俄罗斯方块-消行.mp3 in Resources */,
+				389312F51CDA3442001B8F6B /* Icon1.jpg in Resources */,
+				383C40B31CCD0E3600BB1EE1 /* 俄罗斯方块-失败.mp3 in Resources */,
+				383C40941CCD026D00BB1EE1 /* Main.storyboard in Resources */,
+				383C40B21CCD0E3600BB1EE1 /* 俄罗斯方块-落方块.mp3 in Resources */,
+				3893130A1CDA369C001B8F6B /* Icon3iPhoneApp_60pt@2x.png in Resources */,
+				3893130C1CDA369C001B8F6B /* Icon3iPhoneSpootlight5_29pt@2x.png in Resources */,
+				3893130B1CDA369C001B8F6B /* Icon3iPhoneApp_60pt@3x.png in Resources */,
+				3893130F1CDA369C001B8F6B /* Icon3iPhoneSpootlight7_40pt@3x.png in Resources */,
+				38375DEA1CE2F3F800CDDF17 /* background.mp3 in Resources */,
+				383C40BE1CCD20F300BB1EE1 /* Down.png in Resources */,
+				383C40B81CCD20DC00BB1EE1 /* Up.png in Resources */,
+				3893130E1CDA369C001B8F6B /* Icon3iPhoneSpootlight7_40pt@2x.png in Resources */,
+				383C40B41CCD0E3600BB1EE1 /* 俄罗斯方块1.mp3 in Resources */,
+				383C40BA1CCD20E700BB1EE1 /* Right.png in Resources */,
+				38375DEC1CE2F4A200CDDF17 /* shake.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		383C40871CCD026D00BB1EE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				383C40911CCD026D00BB1EE1 /* ViewController.swift in Sources */,
+				383C40CC1CCDFA5A00BB1EE1 /* GameVIew.swift in Sources */,
+				389C43341CE4C50800B6502A /* ScoreViewController.swift in Sources */,
+				383C408F1CCD026D00BB1EE1 /* AppDelegate.swift in Sources */,
+				3874BDC41CF3F704001CF7AD /* SnappingSlider.swift in Sources */,
+				389313131CDA5281001B8F6B /* MainViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		383C40921CCD026D00BB1EE1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				383C40931CCD026D00BB1EE1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		383C40971CCD026D00BB1EE1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				383C40981CCD026D00BB1EE1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		383C409B1CCD026D00BB1EE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		383C409C1CCD026D00BB1EE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		383C409E1CCD026D00BB1EE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Tetris/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Tom.Tetris;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		383C409F1CCD026D00BB1EE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Tetris/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Tom.Tetris;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		383C40861CCD026D00BB1EE1 /* Build configuration list for PBXProject "Tetris" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				383C409B1CCD026D00BB1EE1 /* Debug */,
+				383C409C1CCD026D00BB1EE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		383C409D1CCD026D00BB1EE1 /* Build configuration list for PBXNativeTarget "Tetris" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				383C409E1CCD026D00BB1EE1 /* Debug */,
+				383C409F1CCD026D00BB1EE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 383C40831CCD026D00BB1EE1 /* Project object */;
+}
