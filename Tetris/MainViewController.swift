@@ -145,7 +145,7 @@ class MainViewController: UIViewController, GameViewDelegate, SnappingSliderDele
         self.view.addSubview(disBn)
         
         //定义slider
-        let snappingSlider = SnappingSlider(frame: CGRectMake(screenWidth - BUTTON_SIZE * 6.5 - MARGINE, screenHight - BUTTON_SIZE  - MARGINE, 120, BUTTON_SIZE), title: "拉我")
+        let snappingSlider = SnappingSlider(frame: CGRectMake(screenWidth - BUTTON_SIZE * 6.5 - MARGINE, screenHight - BUTTON_SIZE  - MARGINE, 120, BUTTON_SIZE), title: "music")
         snappingSlider.delegate = self
         self.view.addSubview(snappingSlider)
     }
@@ -182,7 +182,7 @@ class MainViewController: UIViewController, GameViewDelegate, SnappingSliderDele
     //MARK: 点击事件
     
     func disBu(sender: UIButton!){
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismissViewControllerAnimated(false, completion: nil)
      }
     
     func left(button: UIButton!){
