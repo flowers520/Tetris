@@ -1,5 +1,4 @@
 //
-//  Created by jim
 //  www.kthr.co
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy of
@@ -21,17 +20,15 @@
 
 import UIKit
 
-public protocol SnappingSliderDelegate: class {
+public protocol SnappingSliderDelegateZY: class {
     
-    func snappingSliderDidIncrementValue(slider:SnappingSlider)
-    func snappingSliderDidDecrementValue(slider:SnappingSlider)
-    func snappingSliderDidUpVlaue(slider:SnappingSlider)
-    func snappingSliderDidDownVlaue(slider:SnappingSlider)
+    func snappingSliderDidIncrementValueZY(slider:SnappingSliderZY)
+    func snappingSliderDidDecrementValueZY(slider:SnappingSliderZY)
 }
 
-public class SnappingSlider: UIView {
+public class SnappingSliderZY: UIView {
 
-    final public weak var delegate:SnappingSliderDelegate?
+    final public weak var delegate:SnappingSliderDelegateZY?
 
     final public var incrementAndDecrementLabelFont:UIFont = UIFont(name: "TrebuchetMS-Bold", size: 18.0)! {
         didSet {
@@ -79,25 +76,18 @@ public class SnappingSlider: UIView {
     final private let sliderContainer = UIView(frame: CGRectZero)
     final private let minusLabel = UILabel(frame: CGRectZero)
     final private let plusLabel = UILabel(frame: CGRectZero)
-    
-    final private let upLabel = UILabel(frame: CGRectZero)
-    final private let downLabel = UILabel(frame: CGRectZero)
-    
     final private let sliderView = UIView(frame: CGRectZero)
     final private let sliderViewLabel = UILabel(frame: CGRectZero)
     
     final private var isCurrentDraggingSlider = false
     final private var lastDelegateFireOffset = CGFloat(0)
-    
-    final private var lastDelegateFireOffsetY = CGFloat(0)
     final private var touchesBeganPoint = CGPointZero
     
     final private let sliderPanGestureRecogniser = UIPanGestureRecognizer()
     final private let dynamicButtonAnimator = UIDynamicAnimator()
-    final private var snappingBehavior:SliderSnappingBehavior?
+    final private var snappingBehavior:SliderSnappingBehaviorZY?
 
-    final private let sliderButton: CGFloat = 80.0
-    
+
     // MARK: Init & View Lifecycle
 
     public init(frame:CGRect, title:String) {
@@ -122,20 +112,11 @@ public class SnappingSlider: UIView {
         
         if snappingBehavior?.snappingPoint.x != center.x {
         
-            snappingBehavior = SliderSnappingBehavior(item: sliderView, snapToPoint: CGPointMake(bounds.size.width * 0.5, bounds.size.height * 0.5))
+            snappingBehavior = SliderSnappingBehaviorZY(item: sliderView, snapToPoint: CGPointMake(bounds.size.width * 0.5, bounds.size.height * 0.5))
             lastDelegateFireOffset = sliderView.center.x
         }
         
-        if snappingBehavior?.snappingPoint.y != center.y {
-            
-            snappingBehavior = SliderSnappingBehavior(item: sliderView, snapToPoint: CGPointMake(bounds.size.width * 0.5, bounds.size.height * 0.5))
-            lastDelegateFireOffsetY = sliderView.center.y
-        }
-
-        
         sliderContainer.frame = frame
-        print(frame)
-        print(bounds)
         sliderContainer.center = CGPointMake(bounds.size.width * 0.5, bounds.size.height * 0.5)
         sliderContainer.backgroundColor = incrementAndDecrementBackgroundColor
 
@@ -151,30 +132,15 @@ public class SnappingSlider: UIView {
         plusLabel.font = incrementAndDecrementLabelFont
         plusLabel.textColor = incrementAndDecrementLabelTextColor
         
-        
-        upLabel.frame = CGRectMake(0.0, 0.0, bounds.size.width * 0.25, bounds.size.height * 0.25)
-        upLabel.center = CGPointMake(bounds.width * 0.5,  upLabel.bounds.height * 0.5)
-        upLabel.backgroundColor = incrementAndDecrementBackgroundColor
-        upLabel.font = incrementAndDecrementLabelFont
-        upLabel.textColor = incrementAndDecrementLabelTextColor
-            
-        downLabel.frame = CGRectMake(0.0, 0.0, bounds.size.width * 0.25, bounds.size.height * 0.25)
-        downLabel.center = CGPointMake(bounds.width * 0.5,  bounds.size.height - upLabel.bounds.height * 0.5)
-        downLabel.backgroundColor = incrementAndDecrementBackgroundColor
-        downLabel.font = incrementAndDecrementLabelFont
-        downLabel.textColor = incrementAndDecrementLabelTextColor
-
-        sliderView.frame = CGRectMake(0.0, 0.0, bounds.size.width * 0.5, bounds.size.height * 0.5)
+        sliderView.frame = CGRectMake(0.0, 0.0, bounds.size.width * 0.5, bounds.size.height)
         sliderView.center = CGPointMake(bounds.size.width * 0.5, bounds.size.height * 0.5)
         sliderView.backgroundColor = sliderColor
         
         sliderViewLabel.frame = CGRectMake(0.0, 0.0, sliderView.bounds.size.width, sliderView.bounds.size.height)
-        sliderViewLabel.center = CGPointMake(sliderView.bounds.size.width * 0.5, sliderView.bounds.size.height * 0.5)
+        sliderViewLabel.center = CGPointMake(sliderViewLabel.bounds.size.width * 0.5, sliderViewLabel.bounds.size.height * 0.5)
         sliderViewLabel.backgroundColor = sliderColor
-        sliderViewLabel.font = incrementAndDecrementLabelFont
+        sliderViewLabel.font = sliderTitleFont
         sliderViewLabel.text = sliderTitleText
-        
-
         
         layer.cornerRadius = sliderCornerRadius
     }
@@ -194,12 +160,9 @@ public class SnappingSlider: UIView {
                 dynamicButtonAnimator.removeBehavior(snappingBehavior!)
                 lastDelegateFireOffset = (bounds.size.width * 0.5) + ((touchesBeganPoint.x + touchesBeganPoint.x) * 0.40)
                 
-                lastDelegateFireOffsetY = (bounds.size.height * 0.5) + ((touchesBeganPoint.y + touchesBeganPoint.y) * 0.40)
-                
             case .Changed:
                 
                 let translationInView = sliderPanGestureRecogniser.translationInView(sliderView)
-                
                 let translatedCenterX:CGFloat = (bounds.size.width * 0.5) + ((touchesBeganPoint.x + translationInView.x) * 0.40)
                 sliderView.center = CGPointMake(translatedCenterX, sliderView.center.y);
                 
@@ -207,7 +170,7 @@ public class SnappingSlider: UIView {
                     
                     if (fabs(lastDelegateFireOffset - translatedCenterX) >= (sliderView.bounds.size.width * 0.15)) {
                         
-                        delegate?.snappingSliderDidDecrementValue(self)
+                        delegate?.snappingSliderDidDecrementValueZY(self)
                         lastDelegateFireOffset = translatedCenterX
                     }
                 }
@@ -215,31 +178,10 @@ public class SnappingSlider: UIView {
                     
                     if (fabs(lastDelegateFireOffset - translatedCenterX) >= (sliderView.bounds.size.width * 0.15)) {
                         
-                        delegate?.snappingSliderDidIncrementValue(self)
+                        delegate?.snappingSliderDidIncrementValueZY(self)
                         lastDelegateFireOffset = translatedCenterX
                     }
                 }
-                
-                let translatedCenterY:CGFloat = (bounds.size.height * 0.5) + ((touchesBeganPoint.y + translationInView.y) * 0.40)
-                sliderView.center = CGPointMake(sliderView.center.x, translatedCenterY);
-                
-                if (translatedCenterY < lastDelegateFireOffsetY) {
-                    
-                    if (fabs(lastDelegateFireOffsetY - translatedCenterY) >= (sliderView.bounds.size.height * 0.15)) {
-                        
-                        delegate?.snappingSliderDidUpVlaue(self)
-                        lastDelegateFireOffsetY = translatedCenterY
-                    }
-                }
-                else {
-                    
-                    if (fabs(lastDelegateFireOffsetY - translatedCenterY) >= (sliderView.bounds.size.height * 0.15)) {
-                        
-                        delegate?.snappingSliderDidDownVlaue(self)
-                        lastDelegateFireOffsetY = translatedCenterY
-                    }
-                }
-
                 
             case .Ended:
 
@@ -254,7 +196,6 @@ public class SnappingSlider: UIView {
                 dynamicButtonAnimator.addBehavior(snappingBehavior!)
                 isCurrentDraggingSlider = false
                 lastDelegateFireOffset = center.x
-                lastDelegateFireOffsetY = center.y
 
             case .Possible:
 
@@ -268,27 +209,15 @@ public class SnappingSlider: UIView {
     private func setup() {
         sliderContainer.backgroundColor = backgroundColor
 
-        minusLabel.text = "L"
+        minusLabel.text = "-"
         minusLabel.textAlignment = NSTextAlignment.Center
         sliderContainer.addSubview(minusLabel)
 
-        plusLabel.text = "R"
+        plusLabel.text = "+"
         plusLabel.textAlignment = NSTextAlignment.Center
         sliderContainer.addSubview(plusLabel)
-        
-
-        
-        upLabel.text = "U"
-        upLabel.textAlignment = NSTextAlignment.Center
-        sliderContainer.addSubview(upLabel)
-        
-        downLabel.text = "下"
-        downLabel.textAlignment = NSTextAlignment.Center
-        sliderContainer.addSubview(downLabel)
 
         sliderContainer.addSubview(sliderView)
-
-        
 
         sliderViewLabel.userInteractionEnabled = false
         sliderViewLabel.textAlignment = NSTextAlignment.Center
@@ -304,7 +233,7 @@ public class SnappingSlider: UIView {
     }
 }
 
-final class SliderSnappingBehavior: UIDynamicBehavior {
+final class SliderSnappingBehaviorZY: UIDynamicBehavior {
  
     let snappingPoint:CGPoint
     init(item: UIDynamicItem, snapToPoint point: CGPoint) {

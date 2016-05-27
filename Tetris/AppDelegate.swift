@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
 //        let main_vc = MainViewController()
 //        self.window?.rootViewController = main_vc
-//        let score_vc = ScoreViewController()
+////        let score_vc = ScoreViewController()
 //        self.window?.rootViewController = score_vc
         
         return true
