@@ -94,8 +94,8 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
         print("table-row:\(indexPath.row)")
         print(score.objectAtIndex(indexPath.row))
         
-        cell.textLabel?.text = "分数: \(score.objectAtIndex(indexPath.row))"
-        cell.detailTextLabel?.text = "时间: \(time.objectAtIndex(indexPath.row))"
+        cell.textLabel?.text = "score: \(score.objectAtIndex(indexPath.row))"
+        cell.detailTextLabel?.text = "time: \(time.objectAtIndex(indexPath.row))"
         
         print(score, time)
         return cell
@@ -114,7 +114,7 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     //修改删除按钮文字
     func tableView(tableView: UITableView, titleForDeleteConfirmationButtonForRowAtIndexPath indexPath: NSIndexPath) -> String? {
-        return "删"
+        return "delete"
     }
     /*
     // MARK: - Navigation
