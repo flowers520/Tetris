@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 
 
-class MainViewController: UIViewController, GameViewDelegate, SnappingSliderDelegateZY, SnappingSliderDelegate {
+class MainViewController: UIViewController, GameViewDelegate, SnappingSliderDelegate {
     
     
     let MARGINE: CGFloat = 10
@@ -93,38 +93,38 @@ class MainViewController: UIViewController, GameViewDelegate, SnappingSliderDele
     
     //定义添加控制按钮的方法
     func addButtons(){
-//        //添加向左的按钮
-//        var leftBn = UIButton(type: UIButtonType.Custom) as UIButton
-//        leftBn = UIButton(frame: CGRectMake(screenWidth - BUTTON_SIZE * 3 - MARGINE, screenHight - BUTTON_SIZE - MARGINE, BUTTON_SIZE, BUTTON_SIZE))
-//        leftBn.alpha = BUTTON_ALPHA
-//        leftBn.setImage(UIImage(named: "Left"), forState: .Normal)
-//        leftBn.setTitle("L", forState: .Highlighted)
-//        leftBn.addTarget(self, action: Selector("left:"), forControlEvents: .TouchUpInside)
-//        self.view.addSubview(leftBn)
-//        //添加向下的按钮
-//        var downBn = UIButton(type: .Custom) as UIButton
-//        downBn = UIButton(frame: CGRectMake(screenWidth - BUTTON_SIZE * 2 - MARGINE, screenHight - BUTTON_SIZE - MARGINE, BUTTON_SIZE, BUTTON_SIZE))
-//        downBn.alpha = BUTTON_ALPHA
-//        downBn.setImage(UIImage(named: "Down"), forState: .Normal)
-//        downBn.setTitle("D", forState: .Highlighted)
-//        downBn.addTarget(self, action: Selector("down:"), forControlEvents: .TouchUpInside)
-//        self.view.addSubview(downBn)
-//        //添加向右的按钮
-//        var rightBn = UIButton(type: .Custom) as UIButton
-//        rightBn = UIButton(frame: CGRectMake(screenWidth - BUTTON_SIZE * 1 - MARGINE, screenHight - BUTTON_SIZE - MARGINE, BUTTON_SIZE, BUTTON_SIZE))
-//        rightBn.alpha = BUTTON_ALPHA
-//        rightBn.setImage(UIImage(named: "Right"), forState: .Normal)
-//        rightBn.setTitle("R", forState: .Highlighted)
-//        rightBn.addTarget(self, action: Selector("right:"), forControlEvents: .TouchUpInside)
-//        self.view.addSubview(rightBn)
-//        //添加向上的按钮
-//        var upBn = UIButton(type: .Custom) as UIButton
-//        upBn  = UIButton(frame: CGRectMake(screenWidth - BUTTON_SIZE * 2 - MARGINE, screenHight - BUTTON_SIZE * 2 - MARGINE, BUTTON_SIZE, BUTTON_SIZE))
-//        upBn.alpha = BUTTON_ALPHA
-//        upBn.setImage(UIImage(named: "Up"), forState: .Normal)
-//        upBn.setTitle("U", forState: .Highlighted)
-//        upBn.addTarget(self, action: Selector("up:"), forControlEvents: .TouchUpInside)
-//        self.view.addSubview(upBn)
+        //添加向左的按钮
+        var leftBn = UIButton(type: UIButtonType.Custom) as UIButton
+        leftBn = UIButton(frame: CGRectMake(screenWidth - BUTTON_SIZE * 3 - MARGINE, screenHight - BUTTON_SIZE - MARGINE, BUTTON_SIZE, BUTTON_SIZE))
+        leftBn.alpha = BUTTON_ALPHA
+        leftBn.setImage(UIImage(named: "Left"), forState: .Normal)
+        leftBn.setTitle("L", forState: .Highlighted)
+        leftBn.addTarget(self, action: Selector("left:"), forControlEvents: .TouchUpInside)
+        self.view.addSubview(leftBn)
+        //添加向下的按钮
+        var downBn = UIButton(type: .Custom) as UIButton
+        downBn = UIButton(frame: CGRectMake(screenWidth - BUTTON_SIZE * 2 - MARGINE, screenHight - BUTTON_SIZE - MARGINE, BUTTON_SIZE, BUTTON_SIZE))
+        downBn.alpha = BUTTON_ALPHA
+        downBn.setImage(UIImage(named: "Down"), forState: .Normal)
+        downBn.setTitle("D", forState: .Highlighted)
+        downBn.addTarget(self, action: Selector("down:"), forControlEvents: .TouchUpInside)
+        self.view.addSubview(downBn)
+        //添加向右的按钮
+        var rightBn = UIButton(type: .Custom) as UIButton
+        rightBn = UIButton(frame: CGRectMake(screenWidth - BUTTON_SIZE * 1 - MARGINE, screenHight - BUTTON_SIZE - MARGINE, BUTTON_SIZE, BUTTON_SIZE))
+        rightBn.alpha = BUTTON_ALPHA
+        rightBn.setImage(UIImage(named: "Right"), forState: .Normal)
+        rightBn.setTitle("R", forState: .Highlighted)
+        rightBn.addTarget(self, action: Selector("right:"), forControlEvents: .TouchUpInside)
+        self.view.addSubview(rightBn)
+        //添加向上的按钮
+        var upBn = UIButton(type: .Custom) as UIButton
+        upBn  = UIButton(frame: CGRectMake(screenWidth - BUTTON_SIZE * 2 - MARGINE, screenHight - BUTTON_SIZE * 2 - MARGINE, BUTTON_SIZE, BUTTON_SIZE))
+        upBn.alpha = BUTTON_ALPHA
+        upBn.setImage(UIImage(named: "Up"), forState: .Normal)
+        upBn.setTitle("U", forState: .Highlighted)
+        upBn.addTarget(self, action: Selector("up:"), forControlEvents: .TouchUpInside)
+        self.view.addSubview(upBn)
         
 //        //背景音乐控制器
 //        var musicBn = UIButton()
@@ -145,26 +145,21 @@ class MainViewController: UIViewController, GameViewDelegate, SnappingSliderDele
         self.view.addSubview(disBn)
         
         //定义slider
-        let snappingSliderZY = SnappingSliderZY(frame: CGRectMake(screenWidth - BUTTON_SIZE * 6.5 - MARGINE, screenHight - BUTTON_SIZE  - MARGINE, 120, BUTTON_SIZE), title: "music")
-        snappingSliderZY.delegate = self
-        self.view.addSubview(snappingSliderZY)
-        
-        //定义方向slider
-        let snapingSlider = SnappingSlider(frame: CGRectMake(screenWidth - BUTTON_SIZE * 2 - MARGINE, screenHight - BUTTON_SIZE * 2 , BUTTON_SIZE * 2, BUTTON_SIZE * 2), title: "Dir")
-        snapingSlider.delegate = self
-        self.view.addSubview(snapingSlider)
+        let snappingSlider = SnappingSlider(frame: CGRectMake(screenWidth - BUTTON_SIZE * 6.5 - MARGINE, screenHight - BUTTON_SIZE  - MARGINE, 120, BUTTON_SIZE), title: "music")
+        snappingSlider.delegate = self
+        self.view.addSubview(snappingSlider)
     }
     
     //alertController
     func alertController() -> Void{
-        let alertController = UIAlertController(title: "Game over", message: "The game is over, could you tell me whether or not to start?", preferredStyle: .Alert)
-        let cancelAction = UIAlertAction(title: "NO", style: .Cancel, handler: {
+        let alertController = UIAlertController(title: "游戏结束", message: "游戏已经结束，请问是否重新开始", preferredStyle: .Alert)
+        let cancelAction = UIAlertAction(title: "否", style: .Cancel, handler: {
             (UIAlertAction) -> Void in
             print("你点击了否")
             self.bgMusicPlayer.pause()
             self.dismissViewControllerAnimated(false, completion: nil)
         })
-        let okAction = UIAlertAction(title: "YES", style: .Default, handler: {
+        let okAction = UIAlertAction(title: "是", style: .Default, handler: {
             (UIAlertAction) -> Void in
             print("你点击了是")
             //保存分数
@@ -189,42 +184,29 @@ class MainViewController: UIViewController, GameViewDelegate, SnappingSliderDele
     
     func disBu(sender: UIButton!){
         self.bgMusicPlayer.pause()
-        if(self.gameView.curScore > 100){
-            //保存分数
-            score.addObject(self.gameView.curScore)
-            //日期和字符串的转换
-            let dateFormatter: NSDateFormatter = NSDateFormatter()
-            dateFormatter.dateFormat = "yy//MM//dd HH:mm:ss"
-            //获取当前时间
-            let d: NSDate = NSDate()
-            let date: NSString = dateFormatter.stringFromDate(d)
-            //保存时间
-            time.addObject(date)
-        }
-
         self.dismissViewControllerAnimated(false, completion: nil)
      }
     
-//    func left(button: UIButton!){
-//        //print("Left")
-//        gameView.moveLeft()
-//    }
-//    
-//    func right(button: UIButton!){
-//        //print("Right")
-//        gameView.moveRight()
-//    }
-//    
-//    func up(button: UIButton!){
-//        //print("Up")
-//        gameView.rotate()
-//    }
-//    
-//    func down(button: UIButton!){
-//        //print("Down")
-//        gameView.moveDown()
-//    }
-//    
+    func left(button: UIButton!){
+        //print("Left")
+        gameView.moveLeft()
+    }
+    
+    func right(button: UIButton!){
+        //print("Right")
+        gameView.moveRight()
+    }
+    
+    func up(button: UIButton!){
+        //print("Up")
+        gameView.rotate()
+    }
+    
+    func down(button: UIButton!){
+        //print("Down")
+        gameView.moveDown()
+    }
+    
 //    func music(button: UIButton!){
 //        if isPlaying {
 //            //准备播放音乐
@@ -250,35 +232,19 @@ class MainViewController: UIViewController, GameViewDelegate, SnappingSliderDele
     }
 
 
-    //音乐滑块方法
-    
-    func snappingSliderDidDecrementValueZY(slider: SnappingSliderZY) {
+    //滑块方法
+    func snappingSliderDidDecrementValue(slider: SnappingSlider) {
         numberLabel = max(0.0, numberLabel-0.05)
         bgMusicPlayer.volume = Float(numberLabel)
-
-    }
-    func snappingSliderDidIncrementValueZY(slider: SnappingSliderZY) {
-        numberLabel = max(numberLabel+0.05, 1.0)
-        bgMusicPlayer.volume = Float(numberLabel)
-
-    }
-    
-    //方向滑块
-    func snappingSliderDidUpVlaue(slider: SnappingSlider) {
-        gameView.rotate()
-    }
-    
-    func snappingSliderDidDownVlaue(slider: SnappingSlider) {
-        gameView.moveDown()
-    }
-    
-    func snappingSliderDidDecrementValue(slider: SnappingSlider) {
-        gameView.moveLeft()
+        //print("-")
     }
     
     func snappingSliderDidIncrementValue(slider: SnappingSlider) {
-        gameView.moveRight()
+        numberLabel = max(numberLabel+0.05, 1.0)
+        bgMusicPlayer.volume = Float(numberLabel)
+        //print("+")
     }
+    
     /*
     // MARK: - Navigation
 

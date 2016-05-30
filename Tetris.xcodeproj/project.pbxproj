@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		382773671CF8869600D80FEF /* SnappingSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382773661CF8869600D80FEF /* SnappingSlider.swift */; };
-		382773691CF8873E00D80FEF /* SnappingSliderZY.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382773681CF8873E00D80FEF /* SnappingSliderZY.swift */; };
 		38375DEA1CE2F3F800CDDF17 /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 38375DE91CE2F3F800CDDF17 /* background.mp3 */; };
 		38375DEC1CE2F4A200CDDF17 /* shake.wav in Resources */ = {isa = PBXBuildFile; fileRef = 38375DEB1CE2F4A200CDDF17 /* shake.wav */; };
 		38375DEE1CE2F9BC00CDDF17 /* bgmusic.png in Resources */ = {isa = PBXBuildFile; fileRef = 38375DED1CE2F9BC00CDDF17 /* bgmusic.png */; };
@@ -27,6 +25,7 @@
 		383C40BC1CCD20ED00BB1EE1 /* Left.png in Resources */ = {isa = PBXBuildFile; fileRef = 383C40BB1CCD20ED00BB1EE1 /* Left.png */; };
 		383C40BE1CCD20F300BB1EE1 /* Down.png in Resources */ = {isa = PBXBuildFile; fileRef = 383C40BD1CCD20F300BB1EE1 /* Down.png */; };
 		383C40CC1CCDFA5A00BB1EE1 /* GameVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383C40CB1CCDFA5A00BB1EE1 /* GameVIew.swift */; };
+		3874BDC41CF3F704001CF7AD /* SnappingSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3874BDC31CF3F704001CF7AD /* SnappingSlider.swift */; };
 		3878C3A21CF2B67800F7ACA7 /* dis.png in Resources */ = {isa = PBXBuildFile; fileRef = 3878C3A11CF2B67800F7ACA7 /* dis.png */; };
 		389312F51CDA3442001B8F6B /* Icon1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 389312F41CDA3442001B8F6B /* Icon1.jpg */; };
 		389313031CDA3664001B8F6B /* Icon4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 389313021CDA3664001B8F6B /* Icon4.jpg */; };
@@ -42,8 +41,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		382773661CF8869600D80FEF /* SnappingSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnappingSlider.swift; sourceTree = "<group>"; };
-		382773681CF8873E00D80FEF /* SnappingSliderZY.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnappingSliderZY.swift; sourceTree = "<group>"; };
 		38375DE91CE2F3F800CDDF17 /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
 		38375DEB1CE2F4A200CDDF17 /* shake.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shake.wav; sourceTree = "<group>"; };
 		38375DED1CE2F9BC00CDDF17 /* bgmusic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bgmusic.png; sourceTree = "<group>"; };
@@ -64,6 +61,7 @@
 		383C40BB1CCD20ED00BB1EE1 /* Left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Left.png; sourceTree = "<group>"; };
 		383C40BD1CCD20F300BB1EE1 /* Down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Down.png; sourceTree = "<group>"; };
 		383C40CB1CCDFA5A00BB1EE1 /* GameVIew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameVIew.swift; sourceTree = "<group>"; };
+		3874BDC31CF3F704001CF7AD /* SnappingSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnappingSlider.swift; sourceTree = "<group>"; };
 		3878C3A11CF2B67800F7ACA7 /* dis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dis.png; sourceTree = "<group>"; };
 		389312F41CDA3442001B8F6B /* Icon1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Icon1.jpg; sourceTree = "<group>"; };
 		389313021CDA3664001B8F6B /* Icon4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Icon4.jpg; sourceTree = "<group>"; };
@@ -116,8 +114,7 @@
 				389313121CDA5281001B8F6B /* MainViewController.swift */,
 				389C43331CE4C50800B6502A /* ScoreViewController.swift */,
 				383C40CB1CCDFA5A00BB1EE1 /* GameVIew.swift */,
-				382773661CF8869600D80FEF /* SnappingSlider.swift */,
-				382773681CF8873E00D80FEF /* SnappingSliderZY.swift */,
+				3874BDC31CF3F704001CF7AD /* SnappingSlider.swift */,
 				383C40921CCD026D00BB1EE1 /* Main.storyboard */,
 				383C40951CCD026D00BB1EE1 /* Assets.xcassets */,
 				383C40971CCD026D00BB1EE1 /* LaunchScreen.storyboard */,
@@ -251,9 +248,8 @@
 				383C40CC1CCDFA5A00BB1EE1 /* GameVIew.swift in Sources */,
 				389C43341CE4C50800B6502A /* ScoreViewController.swift in Sources */,
 				383C408F1CCD026D00BB1EE1 /* AppDelegate.swift in Sources */,
-				382773671CF8869600D80FEF /* SnappingSlider.swift in Sources */,
+				3874BDC41CF3F704001CF7AD /* SnappingSlider.swift in Sources */,
 				389313131CDA5281001B8F6B /* MainViewController.swift in Sources */,
-				382773691CF8873E00D80FEF /* SnappingSliderZY.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
