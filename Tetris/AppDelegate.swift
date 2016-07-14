@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  Tetris
-//
-//  Created by jim on 16/4/24.
-//  Copyright © 2016年 jim. All rights reserved.
-//
 
 import UIKit
 

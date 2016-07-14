@@ -30,12 +30,6 @@
 		3878C3A21CF2B67800F7ACA7 /* dis.png in Resources */ = {isa = PBXBuildFile; fileRef = 3878C3A11CF2B67800F7ACA7 /* dis.png */; };
 		389312F51CDA3442001B8F6B /* Icon1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 389312F41CDA3442001B8F6B /* Icon1.jpg */; };
 		389313031CDA3664001B8F6B /* Icon4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 389313021CDA3664001B8F6B /* Icon4.jpg */; };
-		3893130A1CDA369C001B8F6B /* Icon3iPhoneApp_60pt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 389313041CDA369C001B8F6B /* Icon3iPhoneApp_60pt@2x.png */; };
-		3893130B1CDA369C001B8F6B /* Icon3iPhoneApp_60pt@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 389313051CDA369C001B8F6B /* Icon3iPhoneApp_60pt@3x.png */; };
-		3893130C1CDA369C001B8F6B /* Icon3iPhoneSpootlight5_29pt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 389313061CDA369C001B8F6B /* Icon3iPhoneSpootlight5_29pt@2x.png */; };
-		3893130D1CDA369C001B8F6B /* Icon3iPhoneSpootlight5_29pt@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 389313071CDA369C001B8F6B /* Icon3iPhoneSpootlight5_29pt@3x.png */; };
-		3893130E1CDA369C001B8F6B /* Icon3iPhoneSpootlight7_40pt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 389313081CDA369C001B8F6B /* Icon3iPhoneSpootlight7_40pt@2x.png */; };
-		3893130F1CDA369C001B8F6B /* Icon3iPhoneSpootlight7_40pt@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 389313091CDA369C001B8F6B /* Icon3iPhoneSpootlight7_40pt@3x.png */; };
 		389313131CDA5281001B8F6B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389313121CDA5281001B8F6B /* MainViewController.swift */; };
 		389C43341CE4C50800B6502A /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389C43331CE4C50800B6502A /* ScoreViewController.swift */; };
 		389C43361CE4C50800B6502A /* Icon2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 389C43351CE4C50800B6502A /* Icon2.jpg */; };
@@ -67,12 +61,6 @@
 		3878C3A11CF2B67800F7ACA7 /* dis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dis.png; sourceTree = "<group>"; };
 		389312F41CDA3442001B8F6B /* Icon1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Icon1.jpg; sourceTree = "<group>"; };
 		389313021CDA3664001B8F6B /* Icon4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Icon4.jpg; sourceTree = "<group>"; };
-		389313041CDA369C001B8F6B /* Icon3iPhoneApp_60pt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon3iPhoneApp_60pt@2x.png"; sourceTree = "<group>"; };
-		389313051CDA369C001B8F6B /* Icon3iPhoneApp_60pt@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon3iPhoneApp_60pt@3x.png"; sourceTree = "<group>"; };
-		389313061CDA369C001B8F6B /* Icon3iPhoneSpootlight5_29pt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon3iPhoneSpootlight5_29pt@2x.png"; sourceTree = "<group>"; };
-		389313071CDA369C001B8F6B /* Icon3iPhoneSpootlight5_29pt@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon3iPhoneSpootlight5_29pt@3x.png"; sourceTree = "<group>"; };
-		389313081CDA369C001B8F6B /* Icon3iPhoneSpootlight7_40pt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon3iPhoneSpootlight7_40pt@2x.png"; sourceTree = "<group>"; };
-		389313091CDA369C001B8F6B /* Icon3iPhoneSpootlight7_40pt@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon3iPhoneSpootlight7_40pt@3x.png"; sourceTree = "<group>"; };
 		389313121CDA5281001B8F6B /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		389C43331CE4C50800B6502A /* ScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		389C43351CE4C50800B6502A /* Icon2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Icon2.jpg; sourceTree = "<group>"; };
@@ -129,12 +117,6 @@
 		383C40AD1CCD0E1D00BB1EE1 /* Music */ = {
 			isa = PBXGroup;
 			children = (
-				389313041CDA369C001B8F6B /* Icon3iPhoneApp_60pt@2x.png */,
-				389313051CDA369C001B8F6B /* Icon3iPhoneApp_60pt@3x.png */,
-				389313061CDA369C001B8F6B /* Icon3iPhoneSpootlight5_29pt@2x.png */,
-				389313071CDA369C001B8F6B /* Icon3iPhoneSpootlight5_29pt@3x.png */,
-				389313081CDA369C001B8F6B /* Icon3iPhoneSpootlight7_40pt@2x.png */,
-				389313091CDA369C001B8F6B /* Icon3iPhoneSpootlight7_40pt@3x.png */,
 				389312F41CDA3442001B8F6B /* Icon1.jpg */,
 				389C43351CE4C50800B6502A /* Icon2.jpg */,
 				389313021CDA3664001B8F6B /* Icon4.jpg */,
@@ -219,21 +201,15 @@
 				38375DEE1CE2F9BC00CDDF17 /* bgmusic.png in Resources */,
 				389C43361CE4C50800B6502A /* Icon2.jpg in Resources */,
 				383C40961CCD026D00BB1EE1 /* Assets.xcassets in Resources */,
-				3893130D1CDA369C001B8F6B /* Icon3iPhoneSpootlight5_29pt@3x.png in Resources */,
 				383C40BC1CCD20ED00BB1EE1 /* Left.png in Resources */,
 				383C40B51CCD0E3600BB1EE1 /* 俄罗斯方块-消行.mp3 in Resources */,
 				389312F51CDA3442001B8F6B /* Icon1.jpg in Resources */,
 				383C40B31CCD0E3600BB1EE1 /* 俄罗斯方块-失败.mp3 in Resources */,
 				383C40941CCD026D00BB1EE1 /* Main.storyboard in Resources */,
 				383C40B21CCD0E3600BB1EE1 /* 俄罗斯方块-落方块.mp3 in Resources */,
-				3893130A1CDA369C001B8F6B /* Icon3iPhoneApp_60pt@2x.png in Resources */,
-				3893130C1CDA369C001B8F6B /* Icon3iPhoneSpootlight5_29pt@2x.png in Resources */,
-				3893130B1CDA369C001B8F6B /* Icon3iPhoneApp_60pt@3x.png in Resources */,
-				3893130F1CDA369C001B8F6B /* Icon3iPhoneSpootlight7_40pt@3x.png in Resources */,
 				38375DEA1CE2F3F800CDDF17 /* background.mp3 in Resources */,
 				383C40BE1CCD20F300BB1EE1 /* Down.png in Resources */,
 				383C40B81CCD20DC00BB1EE1 /* Up.png in Resources */,
-				3893130E1CDA369C001B8F6B /* Icon3iPhoneSpootlight7_40pt@2x.png in Resources */,
 				383C40B41CCD0E3600BB1EE1 /* 俄罗斯方块1.mp3 in Resources */,
 				383C40BA1CCD20E700BB1EE1 /* Right.png in Resources */,
 				38375DEC1CE2F4A200CDDF17 /* shake.wav in Resources */,

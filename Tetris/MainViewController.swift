@@ -1,16 +1,9 @@
-//
-//  MainViewController.swift
-//  Tetris
-//
-//  Created by jim on 16/5/4.
-//  Copyright © 2016年 jim. All rights reserved.
-//
 
 import UIKit
 import AVFoundation
 
 
-class MainViewController: UIViewController, GameViewDelegate, SnappingSliderDelegateZY, SnappingSliderDelegate {
+class MainViewController: UIViewController, GameViewDelegate, SnappingSliderDelegateZY, SnappingSliderDelegate, UIActionSheetDelegate {
     
     
     let MARGINE: CGFloat = 10
@@ -29,8 +22,6 @@ class MainViewController: UIViewController, GameViewDelegate, SnappingSliderDele
     var scoreShow: UILabel!
     //frame尺寸
     let rect = UIScreen.mainScreen().bounds
-//    //定义音乐是否播放
-//    var isPlaying = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +32,8 @@ class MainViewController: UIViewController, GameViewDelegate, SnappingSliderDele
         screenHight = rect.size.height
         //添加工具条
         addToolBar()
+        //添加手势
+        handle()
         //创建GameView控件
         gameView = GameView(frame: CGRectMake(rect.origin.x + MARGINE, rect.origin.y + TOOLBAR_HEIGHT + MARGINE * 2, rect.size.width - MARGINE * 2, rect.size.height - 80))
         //添加绘制游戏状态的自定义View
@@ -91,6 +84,60 @@ class MainViewController: UIViewController, GameViewDelegate, SnappingSliderDele
         
     }
     
+    
+    //定义滑动手势
+    func handle(){
+        //滑动手势
+        //右滑
+        let swipeRightGesture = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipeGesture:"))
+        self.view.addGestureRecognizer(swipeRightGesture)
+        
+        //左滑
+        let swipeLeftGesture = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipeGesture:"))
+        //不设置是右
+        swipeLeftGesture.direction = UISwipeGestureRecognizerDirection.Left
+        self.view.addGestureRecognizer(swipeLeftGesture)
+        
+        //上滑
+        let swipeUpGesture = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipeGesture:"))
+        swipeUpGesture.direction = UISwipeGestureRecognizerDirection.Up
+        self.view.addGestureRecognizer(swipeUpGesture)
+        
+        //下滑
+        let swipeDownGesture = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipeGesture:"))
+        swipeDownGesture.direction = UISwipeGestureRecognizerDirection.Down
+        self.view.addGestureRecognizer(swipeDownGesture)
+
+    }
+    
+    //滑动手势
+    func handleSwipeGesture(sender: UISwipeGestureRecognizer){
+        //滑动方向
+        let direction = sender.direction
+        //判断是上下左右
+        switch(direction){
+        case UISwipeGestureRecognizerDirection.Left:
+            print("left")
+            gameView.moveLeft()
+            break
+        case UISwipeGestureRecognizerDirection.Right:
+            print("right")
+            gameView.moveRight()
+            break
+        case UISwipeGestureRecognizerDirection.Up:
+            print("up")
+            gameView.rotate()
+            break
+        case UISwipeGestureRecognizerDirection.Down:
+            print("down")
+            gameView.moveDown()
+            break
+        default:
+            break
+        }
+
+    }
+
     //定义添加控制按钮的方法
     func addButtons(){
 //        //添加向左的按钮

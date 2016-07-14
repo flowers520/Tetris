@@ -1,10 +1,4 @@
-//
-//  ScoreViewController.swift
-//  Tetris
-//
-//  Created by jim on 16/5/12.
-//  Copyright © 2016年 jim. All rights reserved.
-//
+
 
 import UIKit
 
